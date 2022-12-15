@@ -8,8 +8,8 @@
 
   --fs-sm: clamp(0.8rem, 1vw, 1rem);
   --fs-md: clamp(1rem, 1.5vw, 1.5rem);
-  --fs-lg: clamp(3rem, 4vw, 5rem);
-  --fs-xl: clamp(4rem, 5vw, 6rem);
+  --fs-lg: clamp(2rem, 3vw, 3rem);
+  --fs-xl: clamp(3rem, 4.5vw, 4.5rem);
 }
 
 * {
@@ -48,7 +48,7 @@ p:last-of-type {
 
 .button {
   display: inline-block;
-  font-size: 1.15rem;
+  font-size: var(--fs-md);
   text-decoration: none;
   text-transform: uppercase;
   border-width: 2px;
@@ -58,7 +58,7 @@ p:last-of-type {
 }
 
 .button-small {
-  font-size: 0.7rem;
+  font-size: var(--fs-sm);
   font-weight: 700;
 }
 
