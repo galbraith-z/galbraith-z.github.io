@@ -12,6 +12,8 @@
   --fs-xl: clamp(3rem, 4.5vw, 4.5rem);
 }
 
+/* @media screen and (prefers-color-scheme: dark) {} */
+
 * {
   box-sizing: border-box;
   transition: all ease-in-out 250ms;
