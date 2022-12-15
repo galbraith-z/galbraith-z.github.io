@@ -5,6 +5,11 @@
   --color-neutral: #dedede;
   --color-accent: #00ff6c;
   --color-dark: #232323;
+
+  --fs-sm: clamp(0.8rem, 1vw, 1rem);
+  --fs-md: clamp(1rem, 1.5vw, 1.5rem);
+  --fs-lg: clamp(3rem, 4vw, 5rem);
+  --fs-xl: clamp(4rem, 5vw, 6rem);
 }
 
 * {
@@ -18,24 +23,10 @@ body {
   text-align: center;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 .container {
   width: 95%;
-  max-width: 70em;
+  width: min(100% - 2rem, 1200px);
   margin: 0 auto;
-}
-
-/** typography */
-
-h1,
-h2 {
-  font-weight: 500;
-  font-size: 2rem;
-  margin-top: 0;
 }
 
 p {
@@ -45,23 +36,6 @@ p {
 
 p:last-of-type {
   margin-bottom: 0;
-}
-
-.title {
-  font-size: 1.8rem;
-  margin: 1.5em;
-  font-weight: 1000;
-  margin-top: 1em;
-}
-
-.title > span {
-  font-weight: 300;
-  display: block;
-  font-size: 1.3rem;
-}
-
-.title-cta {
-  margin: 0 0 0.5em;
 }
 
 .unstyled-list {
@@ -121,39 +95,56 @@ header {
 /** home-hero  */
 
 .home-hero {
-  /*! Replace url w/ own work */
   background: url(../images/hero-bg.jpg) no-repeat center center;
   background-size: cover;
   background-position: center;
   padding: 10em 0;
   color: var(--color-light);
+  height: min(90vh, 100vh);
+}
+
+.title {
+  font-size: var(--fs-xl);
+  margin: 1.5em;
+  font-weight: 900;
+  margin-top: 1em;
+}
+
+.title > span {
+  font-weight: 300;
+  display: block;
+  font-size: var(--fs-lg);
 }
 
 /** home-about */
 
 .home-about-textbox {
   background: var(--color-dark);
-  padding: 4em;
-  width: 100vw;
+  box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
+  color: var(--color-light);
+  padding: 7em;
   margin-left: -2.5%;
   outline: 2px solid var(--color-accent);
-  outline-offset: -2.5em;
-  color: var(--color-light);
+  outline-offset: -3.75em;
   position: relative;
+  text-align: left;
+  top: -6em;
+  width: 50%;
 }
 
 .home-about-textbox h2 {
-  color: var(--color-accent);
-  text-transform: uppercase;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0.75em;
   background: var(--color-dark);
+  color: var(--color-accent);
+  font-size: var(--fs-lg);
+  left: 50%;
+  position: absolute;
   padding: 0 0.145em;
+  text-transform: uppercase;
+  transform: translateX(-50%);
+  top: -0.35em;
 }
 
-  .home-about {
+.home-about {
     /*! Replace url w/ own work */
     background: url(../images/who-we-are.jpg) no-repeat center center;
     background-size: cover;
@@ -161,26 +152,14 @@ header {
     padding-bottom: 10em;
   }
 
-  .home-about-textbox {
-    width: 50%;
-    padding: 7em;
-    outline-offset: -3.75em;
-    margin-left: -2.5%;
-    top: -6em;
-    text-align: left;
-    box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
-  }
-
-  .home-about-textbox h2 {
-    top: 0.9em;
-    left: 30%;
-    transform: translateX(0);
-  }
-}
-
 /** portfolio  */
 .portfolio {
   padding: 3em 0 0;
+}
+
+.portfolio h2 {
+  font-size: var(--fs-lg);
+  margin-bottom: 1em;
 }
 
 .portfolio-item {
@@ -192,7 +171,6 @@ header {
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
-  /* gap: 0.3em solid var(--color-dark); */
 }
 
 .port-item {
@@ -202,6 +180,8 @@ header {
 
 .port-item > img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .port-desc {
@@ -221,7 +201,7 @@ header {
 }
 
 .port-desc > p {
-  font-size: 1.5rem;
+  font-size: var(--fs-md);
   text-transform: uppercase;
   margin: 0;
   padding: 1em;
@@ -234,11 +214,15 @@ header {
   padding: 5em 0;
 }
 
-.cta > h2 {
+.cta h2 {
   color: var(--color-dark);
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: var(--fs-lg);
   margin-bottom: 1em;
+}
+
+.title-cta {
+  margin: 0 0 0.5em;
 }
 
 /** footer  */
