@@ -190,7 +190,9 @@ header {
 .grid-container {
   display: grid;
   grid-template-rows: auto;
-  gap: 0.3em solid var(--color-dark);
+  grid-template-columns: repeat(3, 1fr);
+  overflow: hidden;
+  /* gap: 0.3em solid var(--color-dark); */
 }
 
 .port-item {
@@ -210,6 +212,12 @@ header {
   color: var(--color-light);
   background: rgba(0, 0, 0, 0.6);
   padding-bottom: 2em;
+  transform: translateY(100%);
+}
+
+.port-item:hover .port-desc {
+  transform: translateY(0);
+  transform: translateZ(100);
 }
 
 .port-desc > p {
@@ -217,20 +225,6 @@ header {
   text-transform: uppercase;
   margin: 0;
   padding: 1em;
-}
-
-.grid-container {
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
-}
-
-.port-desc {
-  transform: translateY(100%);
-}
-
-.port-item:hover .port-desc {
-  transform: translateY(0);
-  transform: translateZ(100);
 }
 
 /** cta */
