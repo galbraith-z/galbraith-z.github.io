@@ -136,7 +136,7 @@ p:last-of-type {
   box-shadow: 0 0 4em 0 rgba(0, 0, 0, 0.3);
   color: var(--color-light);
   padding: 7em;
-  margin-left: -2.5%;
+  margin-left: -25%;
   outline: 2px solid var(--color-accent);
   outline-offset: -3.75em;
   position: relative;
@@ -159,7 +159,7 @@ p:last-of-type {
 
 .home-about {
   /*! Replace url w/ own work */
-  background: url(../images/who-we-are.jpg) no-repeat center center;
+  background: url(../images/who-i-am.png) no-repeat center center;
   background-size: cover;
   background-position: center;
   padding-bottom: 10em;
