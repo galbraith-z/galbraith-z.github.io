@@ -101,6 +101,7 @@ p:last-of-type {
   display: flex;
   justify-content: left;
   align-items: center;
+  margin: -2em;
 }
 
 .home-hero-logo img {
@@ -111,7 +112,7 @@ p:last-of-type {
 
 .home-hero-logo img:hover {
   cursor: pointer;
-  transform: scale(1.5);
+  transform: scale(1.25);
 
 }
 
@@ -153,7 +154,7 @@ p:last-of-type {
   padding: 0 0.145em;
   text-transform: uppercase;
   transform: translateX(-50%);
-  top: -0.35em;
+  top: -0.25em;
 }
 
 .home-about {
