@@ -50,6 +50,7 @@ p:last-of-type {
 
 .button {
   display: inline-block;
+  background: transparent;
   font-size: var(--fs-md);
   text-decoration: none;
   text-transform: uppercase;

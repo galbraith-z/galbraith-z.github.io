@@ -21,7 +21,7 @@
                 Making things look great
                 <span>for companies who make great things</span>
             </h1> 
-            <a href="" class="button button-accent">My Work</a>   
+            <button class="button button-accent" id="portfolio-button">My Work</>   
         </div>
     </section>
 
@@ -37,7 +37,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="porfolio-home">
         <h2>Some of my work</h2>
             <div class="grid-container">
            
@@ -100,7 +100,7 @@
     <section class="cta">
         <div class="container">
             <h2>Let's work together</h2>
-            <a href="" class="button button-dark">Contact Me</a>
+            <button class="button button-dark">Contact Me</button>
         </div>
     </section>
 
@@ -132,5 +132,13 @@
                 </div>
             </div>
         </section>
+        <script>
+            const portfolioButton = document.getElementById('portfolio-button');
+            const portfolioHome = document.getElementById('porfolio-home');
+
+            portfolioButton.addEventListener('click', () => {
+                portfolioHome.scrollIntoView({behavior: 'smooth'});
+            });
+        </script>
 </body>
 </html>
