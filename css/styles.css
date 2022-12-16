@@ -216,15 +216,21 @@ strong {
 }
 
 .grid-container {
+  background-color: var(--color-dark);
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(3, 1fr);
   overflow: hidden;
+  grid-gap: 1em;
+  padding: 1em 0;
+
 }
 
 .port-item {
   margin: 0em;
   position: relative;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .port-item > img {
